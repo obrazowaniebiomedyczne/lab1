@@ -138,4 +138,4 @@ Jakie zastosowanie można znaleźć dla tego przekształcenia? Odpowiedź uzasad
 
 Korzystając z poniższego tutoriala, przygotuj skrypt zdolny do segmentacji wybranego przez ciebie obrazu. Spróbuj poprawić jakość segmentacji, stosując filtrowanie i przekształcenia morfologiczne. Zaprezentuj zarówno początkową segmentację jak i tę poprawioną.
 
-http://scikit-image.org/docs/dev/user_guide/tutorial_segmentation.html
+- [Image Segmentation tutorial](http://scikit-image.org/docs/dev/user_guide/tutorial_segmentation.html)
