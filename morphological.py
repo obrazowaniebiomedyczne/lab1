@@ -18,3 +18,6 @@ io.imsave('figures/m_dil.png', dil)
 ## Erosion
 ero = morphology.erosion(image, selem)
 io.imsave('figures/m_ero.png', ero)
+
+foo = dil - ero
+io.imsave('figures/m_dif.png', foo)

@@ -117,7 +117,25 @@ sob = filters.sobel(image)
 
 ## Zadania
 
-Dla wybranego przez siebie obrazu, wczytanego z pliku, napisz skrypt, który zbada:
+### Filtrowanie [3]
 
-- Sześć różnych filtrów.
-- Watersheding zarówno po erozji jak dylatacji.
+Dla wybranego przez siebie obrazu, wczytanego z pliku, napisz skrypt, który zbada sześć różnych filtrów, po trzy uśredniające i medianowe. Używaj różnych elementów strukturalnych.
+
+### Przekształcenia morfologiczne[4]
+Dane jest proste przekształcenie morfologiczne, będące różnicą pomiędzy mapą dylatacji i erozji obrazu:
+
+```python
+dif = dil - ero
+```
+
+które produkuje obrazy podobne do poniższego.
+
+![](figures/m_dif.png)
+
+Jakie zastosowanie można znaleźć dla tego przekształcenia? Odpowiedź uzasadnij.
+
+### Segmentacja[5]
+
+Korzystając z poniższego tutoriala, przygotuj skrypt zdolny do segmentacji wybranego przez ciebie obrazu. Spróbuj poprawić jakość segmentacji, stosując filtrowanie i przekształcenia morfologiczne. Zaprezentuj zarówno początkową segmentację jak i tę poprawioną.
+
+http://scikit-image.org/docs/dev/user_guide/tutorial_segmentation.html
