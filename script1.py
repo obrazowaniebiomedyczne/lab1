@@ -15,7 +15,7 @@ gau = filters.gaussian(noisedImage, sigma = .5)
 io.imsave('figures/02_gau.png', gau)
 
 # Median
-selem = morphology.disk(5)  # selem
+selem = morphology.disk(2)  # selem
 med = filters.median(noisedImage, selem)
 io.imsave('figures/03_med.png', med)
 
