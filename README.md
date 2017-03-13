@@ -1,6 +1,8 @@
 # Laboratorium 1
 > Wczytywanie, wyświetlanie i zapisywanie plików graficznych, elementy strukturalne, filtry uśredniające i medianowe, dylatacja, erozja i konturowanie.
 
+## Używane moduły
+
 ```python
 from skimage import data, io, filters, util, morphology
 ```
@@ -11,7 +13,8 @@ from skimage import data, io, filters, util, morphology
 - [util](http://scikit-image.org/docs/dev/api/skimage.util.html)
 - [morphology](http://scikit-image.org/docs/dev/api/skimage.morphology.html)
 
-## Wczytywanie, wyświetlanie i zapisywanie plików graficznych
+## Operacje
+### Wczytywanie, wyświetlanie i zapisywanie plików graficznych
 
 Baza danych.
 
@@ -38,7 +41,7 @@ Zapis do pliku.
 io.imsave('foo.png', image)
 ```
 
-## Filtrowanie
+### Filtrowanie
 
 Wczytujemy obraz.
 
@@ -57,7 +60,7 @@ noisedImage = util.random_noise(image, mode = 's&p')
 ![](figures/noisedImage.png)
 
 
-### Filtr uśredniający
+#### Filtr uśredniający
 
 Na przykład Gaussa.
 
@@ -67,7 +70,7 @@ gau = filters.gaussian(image, sigma = .5)
 
 ![](figures/gau.png)
 
-### Filtr medianowy
+#### Filtr medianowy
 Tworzymy element strukturalny
 
 ```python
@@ -82,7 +85,7 @@ med = filters.median(image, selem)
 
 ![](figures/med.png)
 
-## Dylatacja
+### Dylatacja
 
 ```python
 dil = morphology.dilation(image, selem)
@@ -90,7 +93,7 @@ dil = morphology.dilation(image, selem)
 
 ![](figures/dil.png)
 
-## Erozja
+### Erozja
 
 ```python
 ero = morphology.erosion(image, selem)
@@ -98,10 +101,13 @@ ero = morphology.erosion(image, selem)
 
 ![](figures/ero.png)
 
-## Konturowanie
+### Konturowanie
 
 ```
 sob = filters.sobel(image)
 ```
 
 ![](figures/sob.png)
+
+
+## Zadania
