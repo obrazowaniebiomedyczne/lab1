@@ -32,8 +32,6 @@ io.imshow(image)
 io.show()
 ```
 
-![](figures/ss1.png)
-
 Zapis do pliku.
 
 ```python
