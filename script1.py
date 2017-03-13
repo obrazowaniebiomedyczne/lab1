@@ -16,3 +16,6 @@ io.imsave('figures/gau.png', gau)
 
 med = filters.median(noisedImage, strel)
 io.imsave('figures/med.png', med)
+
+sob = filters.sobel(med)
+io.imsave('figures/sob.png', sob)

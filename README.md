@@ -73,3 +73,11 @@ med = filters.median(image, strel)
 ```
 
 ![](figures/med.png)
+
+## Wykrywanie krawędzi
+
+```
+sob = filters.sobel(med)
+```
+
+![](figures/sob.png)
