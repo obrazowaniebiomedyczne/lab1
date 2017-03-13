@@ -111,3 +111,8 @@ sob = filters.sobel(image)
 
 
 ## Zadania
+
+Dla wybranego przez siebie obrazu, wczytanego z pliku, napisz skrypt, który zbada:
+
+- Sześć różnych filtrów.
+- Watersheding zarówno po erozji jak dylatacji.
