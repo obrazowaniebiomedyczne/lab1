@@ -88,10 +88,9 @@ med = filters.median(image, selem)
 ### Operacje morfologiczne
 Morphology is a broad set of image processing operations that process images based on shapes. Morphological operations apply a structuring element to an input image, creating an output image of the same size. In a morphological operation, the value of each pixel in the output image is based on a comparison of the corresponding pixel in the input image with its neighbors. By choosing the size and shape of the neighborhood, you can construct a morphological operation that is sensitive to specific shapes in the input image.
 
-#### Dylatacja
-
-
 ![](figures/m_image.png)
+
+#### Dylatacja
 
 ```python
 dil = morphology.dilation(image, selem)
