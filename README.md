@@ -49,7 +49,7 @@ Wczytujemy obraz.
 image = io.imread('lena.png')
 ```
 
-![](figures/00_image.png)
+![](figures/f_image.png)
 
 I dodajemy szum typu pieprz i sól.
 
@@ -57,7 +57,7 @@ I dodajemy szum typu pieprz i sól.
 noisedImage = util.random_noise(image, mode = 's&p')
 ```
 
-![](figures/01_noisedImage.png)
+![](figures/f_noisedImage.png)
 
 
 #### Filtr uśredniający
@@ -68,7 +68,7 @@ Na przykład Gaussa.
 gau = filters.gaussian(image, sigma = .5)
 ```
 
-![](figures/02_gau.png)
+![](figures/f_gau.png)
 
 #### Filtr medianowy
 Tworzymy element strukturalny
@@ -83,9 +83,10 @@ Filtrujemy.
 med = filters.median(image, selem)
 ```
 
-![](figures/03_med.png)
+![](figures/f_med.png)
 
-### Dylatacja
+### Operacje morfologiczne
+#### Dylatacja
 
 ```python
 dil = morphology.dilation(image, selem)
@@ -93,7 +94,7 @@ dil = morphology.dilation(image, selem)
 
 ![](figures/dil.png)
 
-### Erozja
+#### Erozja
 
 ```python
 ero = morphology.erosion(image, selem)
