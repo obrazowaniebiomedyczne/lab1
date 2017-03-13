@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from skimage import util, data, io, filters, morphology
+from skimage import util, io, filters, morphology
 
 print 'Filtering'
 
