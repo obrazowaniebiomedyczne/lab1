@@ -83,7 +83,20 @@ med = filters.median(image, selem)
 
 ### Operacje morfologiczne
 
+Wczytujemy obraz i pobieramy z niego kanał zielony.
+
+```python
+image = data.chelsea()
+image = image[:,:,1]
+```
+
 ![](figures/m_image.png)
+
+Operacje morfologiczne z reguły potrzebują elementu strukturalnego.
+
+```python
+selem = morphology.disk(4)
+```
 
 #### Dylatacja
 
