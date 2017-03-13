@@ -68,8 +68,8 @@ gau = filters.gaussian(image, sigma = .5)
 Filtr medianowy Tworzymy element strukturalny
 
 ```
-strel = morphology.disk(5)
-med = filters.median(image, strel)
+selem = morphology.disk(5)
+med = filters.median(image, selem)
 ```
 
 ![](figures/med.png)
@@ -81,3 +81,9 @@ sob = filters.sobel(med)
 ```
 
 ![](figures/sob.png)
+
+## Dylatacja
+
+![](figures/dil.png)
+
+## Erozja
