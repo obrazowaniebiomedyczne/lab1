@@ -1,17 +1,26 @@
 # Laboratorium 1
 
-## Wczytywanie obrazów
+## Wczytywanie i wyświetlanie obrazów
 
 Baza danych
 
 http://scikit-image.org/docs/dev/api/skimage.data.html
 
 ```python
-imageFromDataset = data.coins()
+image = data.coins()
 ```
 
 Plik
 
 ```python
-imageFromFile = io.imread('lena.png')
+image = io.imread('lena.png')
 ```
+
+Wyświetlenie
+
+```python
+io.imshow(image)
+io.show()
+```
+
+![](SS/ss1.png)
