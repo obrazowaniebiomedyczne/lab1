@@ -11,8 +11,8 @@ io.imsave('figures/noisedImage.png', noisedImage)
 strel = morphology.disk(5)
 io.imsave('figures/strel.png', strel)
 
-#med = filters.median(noisedImage, strel)
-#io.imsave('med.png', med)
+gau = filters.gaussian(noisedImage, sigma = .5)
+io.imsave('figures/gau.png', gau)
 
-#gau = filters.gaussian(noisedImage, sigma = .5)
-#io.imsave('gau.png', gau)
+med = filters.median(noisedImage, strel)
+io.imsave('figures/med.png', med)

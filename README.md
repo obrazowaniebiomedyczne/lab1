@@ -56,19 +56,20 @@ noisedImage = util.random_noise(image, mode = 's&p')
 
 ![](figures/noisedImage.png)
 
-Tworzymy element strukturalny
-
-```
-strel = morphology.disk(5)
-```
-
-Filtr medianowy
-```
-med = filters.median(image, strel)
-```
 
 Filtr gaussowski
 
 ```
 gau = filters.gaussian(image, sigma = .5)
 ```
+
+![](figures/gau.png)
+
+Filtr medianowy Tworzymy element strukturalny
+
+```
+strel = morphology.disk(5)
+med = filters.median(image, strel)
+```
+
+![](figures/med.png)
