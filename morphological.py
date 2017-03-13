@@ -4,7 +4,8 @@ from skimage import util, data, io, filters, morphology
 print 'Morphological operations'
 
 # Read
-image = data.coins()
+image = data.chelsea()
+image = image[:,:,1]
 io.imsave('figures/m_image.png', image)
 
 # Structural element
