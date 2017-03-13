@@ -11,8 +11,6 @@ from skimage import data, io, filters, util, morphology
 
 Baza danych
 
-http://scikit-image.org/docs/dev/api/skimage.data.html
-
 ```python
 image = data.coins()
 ```
@@ -41,19 +39,21 @@ io.imsave('foo.png', image)
 
 ## Filtrowanie
 
-Wczytujemy obraz, ograniczamy go tylko do kanału zielonego i dodajemy szum.
+Wczytujemy obraz
 
 ```
 image = data.coins()
 ```
 
-![](figures/image.png)
+![](figures/image.PNG)
+
+i dodajemy szum typu pieprz i sól.
 
 ```
 noisedImage = util.random_noise(image, mode = 's&p')
 ```
 
-![](figures/noisedImage.png)
+![](figures/noisedImage.PNG)
 
 
 Filtr gaussowski
@@ -62,7 +62,7 @@ Filtr gaussowski
 gau = filters.gaussian(image, sigma = .5)
 ```
 
-![](figures/gau.png)
+![](figures/gau.PNG)
 
 Filtr medianowy Tworzymy element strukturalny
 
@@ -71,7 +71,7 @@ selem = morphology.disk(5)
 med = filters.median(image, selem)
 ```
 
-![](figures/med.png)
+![](figures/med.PNG)
 
 ## Wykrywanie krawędzi
 
@@ -79,12 +79,12 @@ med = filters.median(image, selem)
 sob = filters.sobel(med)
 ```
 
-![](figures/sob.png)
+![](figures/sob.PNG)
 
 ## Dylatacja
 
-![](figures/dil.png)
+![](figures/dil.PNG)
 
-## Tresholding
+## Erozja
 
-![](figures/binary.png)
+![](figures/ero.png)
