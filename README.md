@@ -46,10 +46,10 @@ io.imsave('foo.png', image)
 Wczytujemy obraz.
 
 ```python
-image = data.coins()
+image = io.imread('lena.png')
 ```
 
-![](figures/image.png)
+![](figures/00_image.png)
 
 I dodajemy szum typu pieprz i sól.
 
@@ -57,7 +57,7 @@ I dodajemy szum typu pieprz i sól.
 noisedImage = util.random_noise(image, mode = 's&p')
 ```
 
-![](figures/noisedImage.png)
+![](figures/01_noisedImage.png)
 
 
 #### Filtr uśredniający
@@ -68,7 +68,7 @@ Na przykład Gaussa.
 gau = filters.gaussian(image, sigma = .5)
 ```
 
-![](figures/gau.png)
+![](figures/02_gau.png)
 
 #### Filtr medianowy
 Tworzymy element strukturalny
@@ -83,7 +83,7 @@ Filtrujemy.
 med = filters.median(image, selem)
 ```
 
-![](figures/med.png)
+![](figures/03_med.png)
 
 ### Dylatacja
 

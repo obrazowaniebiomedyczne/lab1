@@ -2,23 +2,23 @@
 from skimage import util, data, io, filters, morphology
 
 # Read
-image = data.coins()
-io.imsave('figures/image.png', image)
+image = io.imread('lena.png')
+image = image[:,:,1]
+io.imsave('figures/00_image.png', image)
 
 # Noise
 noisedImage = util.random_noise(image, mode = 's&p')
-io.imsave('figures/noisedImage.png', noisedImage)
+io.imsave('figures/01_noisedImage.png', noisedImage)
 
-# Selem
-selem = morphology.disk(5)
 
 # Gaussian
 gau = filters.gaussian(noisedImage, sigma = .5)
-io.imsave('figures/gau.png', gau)
+io.imsave('figures/02_gau.png', gau)
 
 # Median
+selem = morphology.disk(5)  # selem
 med = filters.median(noisedImage, selem)
-io.imsave('figures/med.png', med)
+io.imsave('figures/03_med.png', med)
 
 # Dilation
 dil = morphology.dilation(image, selem)
