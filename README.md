@@ -1,6 +1,13 @@
 # Laboratorium 1
 
-## Wczytywanie i wyświetlanie obrazów
+```python
+from skimage import data, io, filters, util, morphology
+```
+
+- [data](http://scikit-image.org/docs/dev/api/skimage.data.html) — standardowe obrazy testowe,
+- [io](http://scikit-image.org/docs/dev/api/skimage.io.html) — odczytywanie i zapisywanie obrazów
+
+## Wczytywanie, wyświetlanie i zapisywanie plików graficznych
 
 Baza danych
 
@@ -23,4 +30,45 @@ io.imshow(image)
 io.show()
 ```
 
-![](SS/ss1.png)
+![](figures/ss1.png)
+
+Zapis do pliku.
+
+```python
+io.imsave('foo.png', image)
+```
+
+
+## Filtrowanie
+
+Wczytujemy obraz, ograniczamy go tylko do kanału zielonego i dodajemy szum.
+
+```
+image = io.imread('lena.png')
+image = image[:,:,1]
+```
+
+![](figures/image.png)
+
+```
+noisedImage = util.random_noise(image, mode = 's&p')
+```
+
+![](figures/noisedImage.png)
+
+Tworzymy element strukturalny
+
+```
+strel = morphology.disk(5)
+```
+
+Filtr medianowy
+```
+med = filters.median(image, strel)
+```
+
+Filtr gaussowski
+
+```
+gau = filters.gaussian(image, sigma = .5)
+```
