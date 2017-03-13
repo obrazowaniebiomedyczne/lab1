@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 from skimage import util, data, io, filters, morphology
 
-image = io.imread('lena.png')
-image = image[:,:,1]
+image = data.coins()
 io.imsave('figures/image.png', image)
 
 noisedImage = util.random_noise(image, mode = 's&p')
@@ -22,5 +21,8 @@ io.imsave('figures/sob.png', sob)
 dil = morphology.dilation(sob, selem)
 io.imsave('figures/dil.png', dil)
 
-ero = morphology.erosion(sob, selem)
-io.imsave('figures/ero.png', ero)
+binary = dil > .5
+io.imsave('figures/binary.png', binary)
+
+io.imshow(dil)
+io.show()

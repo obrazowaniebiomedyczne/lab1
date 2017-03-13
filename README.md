@@ -44,8 +44,7 @@ io.imsave('foo.png', image)
 Wczytujemy obraz, ograniczamy go tylko do kanału zielonego i dodajemy szum.
 
 ```
-image = io.imread('lena.png')
-image = image[:,:,1]
+image = data.coins()
 ```
 
 ![](figures/image.png)
@@ -86,4 +85,6 @@ sob = filters.sobel(med)
 
 ![](figures/dil.png)
 
-## Erozja
+## Tresholding
+
+![](figures/binary.png)
