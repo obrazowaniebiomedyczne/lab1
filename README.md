@@ -1,16 +1,25 @@
 # Laboratorium 1
 > Wczytywanie, wyświetlanie i zapisywanie plików graficznych, elementy strukturalne, filtry uśredniające i medianowe, segmentacja.
 
+Aby zrealizować dzisiejsze laboratorium, środowisko obliczeniowe musimy uzupełnić o bibliotekę *scikit-image*.
+
+- `pip install --user scikit-image`
+
 ## Używane moduły
 
 - [data](http://scikit-image.org/docs/dev/api/skimage.data.html) — standardowe obrazy testowe,
 - [io](http://scikit-image.org/docs/dev/api/skimage.io.html) — odczytywanie i zapisywanie obrazów,
-- [filters](http://scikit-image.org/docs/dev/api/skimage.filters.html) - filtrowanie obrazów,
-- [util](http://scikit-image.org/docs/dev/api/skimage.util.html) - funkcje pomocnicze,
-- [morphology](http://scikit-image.org/docs/dev/api/skimage.morphology.html) - operacje morfologiczne.
+- [filters](http://scikit-image.org/docs/dev/api/skimage.filters.html) — filtrowanie obrazów,
+- [util](http://scikit-image.org/docs/dev/api/skimage.util.html) — funkcje pomocnicze,
+- [morphology](http://scikit-image.org/docs/dev/api/skimage.morphology.html) — operacje morfologiczne.
 
 ## Operacje
 ### Wczytywanie, wyświetlanie i zapisywanie plików graficznych
+Importowanie bibliotek
+
+```python
+from skimage import util, io, filters, morphology, data
+```
 
 Baza obrazów.
 
